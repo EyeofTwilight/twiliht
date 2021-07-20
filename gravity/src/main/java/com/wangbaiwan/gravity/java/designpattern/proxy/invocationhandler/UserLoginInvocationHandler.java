@@ -22,6 +22,8 @@ public class UserLoginInvocationHandler implements InvocationHandler
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable
 	{
+		// 调用userLogin的所有方法, 都会进入这个invoke方法, 包括toString equals等
+		// 所以, 实际使用时若是只对一个方法拦截, 则需要对method进行名称、参数类型的判断等
 		System.out.println("开始");
 		Object o = method.invoke(userLogin, args);
 		System.out.println("结束");

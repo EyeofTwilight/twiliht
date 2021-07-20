@@ -15,7 +15,6 @@ public class ProxyTest
 	{
 		// 开启保存生成的代理类
 		System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
-
 		UserLogin userLogin = new UserLoginImpl();
 		UserLogin userLoginProxy = (UserLogin) Proxy.newProxyInstance(UserLogin.class.getClassLoader(),
 				new Class[]{UserLogin.class},

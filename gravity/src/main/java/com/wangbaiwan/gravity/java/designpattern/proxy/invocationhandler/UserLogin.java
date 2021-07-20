@@ -2,5 +2,10 @@ package com.wangbaiwan.gravity.java.designpattern.proxy.invocationhandler;
 
 public interface UserLogin
 {
-	public void login();
+	void login();
+
+	static int log()
+	{
+		return 0;
+	}
 }
